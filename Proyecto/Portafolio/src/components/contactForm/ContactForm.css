@@ -1,0 +1,34 @@
+.contact-form-container {
+  margin-top: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form-left, .contact-form-right {
+  padding: 20px;
+}
+
+.contact-form-input {
+  margin-bottom: 20px;
+}
+
+.contact-form-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-form-checkbox {
+  margin-bottom: 20px;
+}
+
+.contact-form-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-form-info li {
+  margin-bottom: 10px;
+}

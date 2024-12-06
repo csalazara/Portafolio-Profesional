@@ -1,0 +1,52 @@
+/* Message Hello */
+.message {
+    width: auto !important;
+    font-size: 1rem;
+    background: #760101;
+    color: #ffffff; 
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: auto; 
+    display: inline-block; 
+    position: relative; 
+    top: 20%;
+    left: 2%;
+}
+
+.message::before {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #760101;
+    position: absolute; 
+    bottom: -4px; 
+    left: 25%; 
+    transform: translate(-50%) rotate(45deg); 
+}
+
+.social-media-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+.container-social-icon{
+    width: auto !important;
+}
+
+.social-icon{
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  
+  
+  

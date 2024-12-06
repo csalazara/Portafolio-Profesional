@@ -1,0 +1,505 @@
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos adicionales para los iconos y el botón */
+.icon-Dark-Mode {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon--moon {
+  transform: scale(1);
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked + .icon-Dark-Mode.icon--moon {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked + .icon-Dark-Mode.icon--sun {
+  transform: scale(1);
+}
+
+/* Modo Oscuro */
+body.dark-mode .card {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .card-header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .card-body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .card-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Modo Claro */
+body.light-mode .card {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ddd;
+}
+
+body.light-mode .card-header {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+body.light-mode .card-body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .card-footer {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+body.light-mode .background-white {
+  background-color: white; /* Fondo blanco en modo claro */
+}
+
+body.dark-mode .background-white {
+  background-color: #1a1a1a; /* Fondo oscuro en modo oscuro */
+}
+
+body.light-mode .text-color-secondary{
+  color: #373b42 !important;
+}
+
+body.dark-mode .text-color-secondary{
+  color: white !important;
+}
+
+body.light-mode .text-color-black{
+  color: black ;
+}
+
+body.dark-mode .text-color-black{
+  color: white ;
+}
+
+/* ------------------- */
+
+.main-container{
+    max-width: 100%;
+}
+
+.background-primary{
+    background-color: #760101;
+}
+
+.color-primary {
+    color: #760101 !important;
+}
+
+.color-secondary {
+    color: #373b42 !important;
+}
+
+.text-white{
+    color:white;
+}
+
+h1 {
+    font-size: calc(1.5rem + 1vw); /* Ajuste dinámico */
+  }
+  p {
+    font-size: 1rem; /* Legible en pantallas pequeñas */
+    line-height: 1.5; /* Mejora la lectura */
+  }
+
+.profileCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.btnSeetAlert{
+  color: black;
+}
+
+/*Nav*/
+.img-nav-container {
+    position: absolute;
+    top: 0%;  /* Altura del Navbar */
+    left: 0;
+    right: 0;
+    height: 48vh;  /* La altura de la imagen será el 48% de la altura de la ventana */
+    max-height: 500px;
+    background-image: url(../public/fondo.jpg);  /* Aquí va tu URL de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;  /* Asegura que la imagen esté detrás del contenido */
+  }
+
+  .img-nav-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Oscurece la imagen, ajusta el valor de opacidad */
+    z-index: 0;
+}
+
+.nav-link {
+    position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+    padding: 10px 15px; /* Espaciado interno */
+    color: #000; /* Color del texto (puedes cambiarlo) */
+    text-decoration: none; /* Eliminar subrayado por defecto */
+    font-size: 1vm; /* Tamaño ajustado para dispositivos pequeños */
+    padding: 8px 10px; /* Espaciado interno */
+}
+
+.nav-link::after {
+    content: ''; /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Ancho total para que la línea cubra el texto */
+    height: 2px; /* Altura de la línea */
+    background-color: #760101; /* Color de la línea */
+    transform: scaleX(0); /* Inicialmente la línea está oculta */
+    transform-origin: left; /* La línea crece desde la izquierda */
+    transition: transform 0.3s ease; /* Transición suave para el efecto */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1); /* Crece la línea al pasar el cursor */
+}
+
+.nav-link:not(:hover)::after {
+    transform: scaleX(0); /* Se oculta la línea cuando el cursor sale */
+}
+
+.custom-select:focus {
+  outline: none !important; /* Elimina el borde predeterminado */
+  box-shadow: none !important; /* Elimina el efecto de sombra azul */
+  border-color: #ced4da !important; /* Mantiene el borde predeterminado de Bootstrap */
+}
+
+select option:hover,
+select option:focus {
+  background-color: #760101 !important; /* Color personalizado */
+  color: #fff; /* Texto en blanco para buen contraste */
+}
+
+/*Button Resume*/
+.button-transform {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #bdbdbd;
+    padding: 12px 24px;
+    transition: all 0.2s ease-in;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    cursor: pointer;
+
+    z-index: 1;
+  }
+  
+  .button-transform:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button-transform:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #760101;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button-transform:hover {
+    color: #ffffff !important;
+    border: 1px solid #760101;
+  }
+  
+  .button-transform:hover:before {
+    top: -35%;
+    background-color: #760101;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button-transform:hover:after {
+    top: -45%;
+    background-color: #760101;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  /*Button Dark Mode*/
+
+.container-Dark-Mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Para asegurarse de que el botón quede por encima de otros elementos */
+}
+
+.toggle-Dark-Mode {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+  line-height: 1;
+}
+
+.input-Dark-Mode {
+  display: none;
+}
+
+.icon-Dark-Mode {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch-Dark-Mode:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch-Dark-Mode:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}
+
+/*Boton scroll top*/
+.container-ScrollTop {
+  position: fixed;
+  bottom: 80px; /* Establece un espacio para que el botón quede sobre el de modo oscuro */
+  right: 20px;
+  z-index: 10000; /* Más alto que el del Dark Mode */
+}
+
+.scrollTopBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+  transition: background-color 300ms ease;
+}
+
+/* Select idioma */ 
+.menu {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  width: fit-content;
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.menu .link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #760101;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body.light-mode .menu .link svg {
+  width: 14px;
+  height: 14px;
+  fill: #000000;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body.dark-mode .menu .link svg {
+  width: 14px;
+  height: 14px;
+  fill: white;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .item {
+  position: relative;
+}
+
+.menu .item .submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  border-radius: 0 0 16px 16px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+  pointer-events: none;
+  list-style: none;
+}
+
+.menu .item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  border-top: transparent;
+  border-color: #760101;
+}
+
+.menu .item:hover .link {
+  color: #ffffff;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu .item:hover .link::after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.menu .item:hover .link svg {
+  fill: #ffffff;
+  transform: rotate(-180deg);
+}
+
+.submenu .submenu-item {
+  width: 100%;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  background-color: #ffffff; /* Fondo blanco por defecto */
+  color: #000000; /* Texto negro por defecto */
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1; /* Asegura que el texto esté encima del pseudo-elemento */
+}
+
+.submenu .submenu-item:last-child .submenu-link {
+  border-bottom: none;
+}
+
+.submenu .submenu-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #760101; /* Color de fondo al pasar el cursor */
+  z-index: -1; /* Asegura que el fondo esté detrás del texto */
+  transform: scaleX(0);
+  color: white !important;
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.submenu .submenu-link:hover {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+

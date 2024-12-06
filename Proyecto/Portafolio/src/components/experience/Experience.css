@@ -1,0 +1,25 @@
+.icon-container {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    text-align: justify;
+  }
+  
+  
+  
+  
